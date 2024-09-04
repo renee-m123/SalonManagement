@@ -1,0 +1,42 @@
+body{
+    background-color:burlywood;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    background-color:#96c47c77;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.card-body {
+    padding: 20px;
+}
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.card-text {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.card-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}

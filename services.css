@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.navbar li{
+    display:inline-flex;
+    padding-right: 30px;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: 800;
+    width: 100px;
+    display: block;
+    padding: 15px 10px;
+    font-size: 20px;
+}
+.navbar :hover a{
+    display: block;
+    color: beige;
+}
+.navbar{
+    float: right;
+    padding-left: 10px;
+}
+.image1 {
+    position: relative;
+    width:50%;
+    
+}
+.image{
+    
+    opacity: 0.7;
+    display: block;
+    width: 70%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    
+}
+.middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transition: .5s ease;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+       
+      }
+.image1:hover .image{
+    opacity:0.1;
+}
+      
+.image1:hover .middle {
+        opacity: 0.4;
+    }
+.text{
+    color: rgb(2, 0, 0);
+    font-size: 50px;
+    font-weight: 11000;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    padding-left: 30px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+section{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    width: 100%;
+    border: 1px solid rgb(14, 236, 6);
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #628662 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5x;
+    box-shadow: 0 0 35px rgb(0, 0, 0 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(4, 43, 30);
+    margin: 1em 0;
+}
+p{
+    color: rgb(89, 134, 134);
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+.icon-wrapper{
+    background-color: rgb(15, 167, 116);
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transform: 0.5s;
+}
+.card:hover {
+    background-position: 0 100%;
+}
+.card:hover .icon-wrapper{
+    background-color: #ffffff;
+    color: #78b178;
+}
+.card:hover h3 {
+    color: #ffffff;
+}
+.card:hover p{
+    color: #f0f0f0;
+}
+.book button{
+    background: rgb(2, 99, 67);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    .navbar ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4b4b46;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .navbar ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color:#9fe9a3
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/*
+@media  screen and(min-width: 768px) {
+    section{
+        padding: 0 2em;
+    }
+    .column{
+        flex: 0 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (min-width: 992px) {
+    section{
+        padding: 1em 3em;
+    }
+    .column{
+        flex: 0 0 33.33;
+        max-width: 33.33%;
+    }
+    
+}
